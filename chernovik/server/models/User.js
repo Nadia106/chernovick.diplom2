@@ -8,7 +8,7 @@ const schema = new Schema(
     phoneNumber: { type: Number },
     sex: {
       type: String,
-      enum: ["Male", "Female"]
+      enum: ["male", "female"]
     },
     image: String
   },
