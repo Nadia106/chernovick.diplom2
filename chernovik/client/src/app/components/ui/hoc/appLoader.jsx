@@ -17,7 +17,7 @@ const AppLoader = ({ children }) => {
       dispatch(loadBooksList());
     }
   }, [isLoggedIn]);
-  if (booksLoadingStatus) return "Loading...";
+  if (!booksLoadingStatus) return "Loading...";
   return children;
 };
 
