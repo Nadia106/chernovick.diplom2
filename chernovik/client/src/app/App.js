@@ -16,10 +16,10 @@ function App() {
       <AppLoader>
         <Navbar />
         <Switch>
-          <ProtectedRoute path="/:userId?/:edit?" component={User} />
           <Route path="/books/:bookId?" component={Books} />
           <Route path="/login/:type?" component={Login} />
           <Route path="/logout" component={LogOut} />
+          <ProtectedRoute path="users/:userId?/:edit?" component={User} />
           <Route path="/" exact component={Main} />
           <Redirect to="/" />
         </Switch>
