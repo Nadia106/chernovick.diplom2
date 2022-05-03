@@ -19,7 +19,7 @@ function App() {
           <Route path="/books/:bookId?" component={Books} />
           <Route path="/login/:type?" component={Login} />
           <Route path="/logout" component={LogOut} />
-          <ProtectedRoute path="users/:userId?/:edit?" component={User} />
+          <ProtectedRoute path="/users/:userId?/:edit?" component={User} />
           <Route path="/" exact component={Main} />
           <Redirect to="/" />
         </Switch>
