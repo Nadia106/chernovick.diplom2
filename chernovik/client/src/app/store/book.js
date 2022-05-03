@@ -69,6 +69,6 @@ export const getBookById = (bookId) => (state) => {
 };
 
 export const getBooksList = () => (state) => state.books.entities;
-export const getBooksLoadingStatus = () => (state) => state.users.isLoading;
+export const getBooksLoadingStatus = () => (state) => state.books.isLoading;
 
 export default booksReducer;
