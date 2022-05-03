@@ -139,7 +139,7 @@ export const updateUser = (payload) => async (dispatch) => {
   try {
     const { content } = await userService.update(payload);
     dispatch(userUpdatedSuccessed(content));
-    history.push(`/${content._id}`);
+    history.push(`/users/${content._id}`);
   } catch (error) {
     dispatch(userUpdatedFailed(error.message));
   }
