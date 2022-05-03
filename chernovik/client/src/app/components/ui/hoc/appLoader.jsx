@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import { getIsLoggedIn } from "../../../store/users";
+import { getIsLoggedIn, loadUsersList } from "../../../store/users";
 import { getBooksLoadingStatus, loadBooksList } from "../../../store/book";
 import { loadGenresList } from "../../../store/geres";
 
@@ -11,7 +11,7 @@ const AppLoader = ({ children }) => {
   const booksLoadingStatus = useSelector(getBooksLoadingStatus());
 
   useEffect(() => {
-    // dispatch(loadGenresList());
+     dispatch(loadUsersList());
     if (isLoggedIn) {
       dispatch(loadGenresList());
       dispatch(loadBooksList());
